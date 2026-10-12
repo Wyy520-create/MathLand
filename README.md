@@ -36,27 +36,27 @@
 | | |
 | --- | --- |
 | 主菜单地图 | 选关页（带星星） |
-| ![主菜单](./docs/screenshots/01-menu.jpeg) | ![选关页](./docs/screenshots/02-levels.jpeg) |
+| ![主菜单](https://wyy520-create.github.io/MathLand/screenshots/01-menu.jpeg) | ![选关页](https://wyy520-create.github.io/MathLand/screenshots/02-levels.jpeg) |
 | 积木岛 · 数方块 | 积木岛 · 剥洋葱辅助 |
-| ![数方块](./docs/screenshots/03-blocks-count.jpeg) | ![剥洋葱](./docs/screenshots/04-blocks-peel.jpeg) |
+| ![数方块](https://wyy520-create.github.io/MathLand/screenshots/03-blocks-count.jpeg) | ![剥洋葱](https://wyy520-create.github.io/MathLand/screenshots/04-blocks-peel.jpeg) |
 | 积木岛 · 认三视图 | 积木岛 · 搭积木 |
-| ![三视图](./docs/screenshots/05-blocks-view.jpeg) | ![搭积木](./docs/screenshots/06-blocks-build.jpeg) |
+| ![三视图](https://wyy520-create.github.io/MathLand/screenshots/05-blocks-view.jpeg) | ![搭积木](https://wyy520-create.github.io/MathLand/screenshots/06-blocks-build.jpeg) |
 | 积木岛 · 数暴露面 | 口算岛 · 闪电战 |
-| ![数面](./docs/screenshots/07-blocks-faces.jpeg) | ![口算](./docs/screenshots/08-mental.jpeg) |
+| ![数面](https://wyy520-create.github.io/MathLand/screenshots/07-blocks-faces.jpeg) | ![口算](https://wyy520-create.github.io/MathLand/screenshots/08-mental.jpeg) |
 | 三星通关 | 时间岛 · 拨指针 |
-| ![通关](./docs/screenshots/09-pass.jpeg) | ![拨钟](./docs/screenshots/10-clock.jpeg) |
+| ![通关](https://wyy520-create.github.io/MathLand/screenshots/09-pass.jpeg) | ![拨钟](https://wyy520-create.github.io/MathLand/screenshots/10-clock.jpeg) |
 | 购物岛 · 凑钱 | 分数岛 · 涂色 |
-| ![购物](./docs/screenshots/11-shop.jpeg) | ![分数](./docs/screenshots/12-fraction.jpeg) |
+| ![购物](https://wyy520-create.github.io/MathLand/screenshots/11-shop.jpeg) | ![分数](https://wyy520-create.github.io/MathLand/screenshots/12-fraction.jpeg) |
 | 方向岛 · 走迷宫 | 趣题岛 · 抬腿法 |
-| ![迷宫](./docs/screenshots/13-maze.jpeg) | ![趣题](./docs/screenshots/14-chicken.jpeg) |
+| ![迷宫](https://wyy520-create.github.io/MathLand/screenshots/13-maze.jpeg) | ![趣题](https://wyy520-create.github.io/MathLand/screenshots/14-chicken.jpeg) |
 | 统计岛 · 搭条形图 | 学习报告 |
-| ![统计](./docs/screenshots/15-stats.jpeg) | ![报告](./docs/screenshots/16-report.jpeg) |
+| ![统计](https://wyy520-create.github.io/MathLand/screenshots/15-stats.jpeg) | ![报告](https://wyy520-create.github.io/MathLand/screenshots/16-report.jpeg) |
 | 积木岛 · 自由沙盘 | 图形岛 · 拖角认角 |
-| ![沙盘](./docs/screenshots/17-sandbox.jpeg) | ![认角](./docs/screenshots/18-geo-angle.jpeg) |
+| ![沙盘](https://wyy520-create.github.io/MathLand/screenshots/17-sandbox.jpeg) | ![认角](https://wyy520-create.github.io/MathLand/screenshots/18-geo-angle.jpeg) |
 | 图形岛 · 量角器读数 | 图形岛 · 轴对称判断 |
-| ![量角器](./docs/screenshots/19-geo-protractor.jpeg) | ![轴对称](./docs/screenshots/20-geo-symmetry.jpeg) |
+| ![量角器](https://wyy520-create.github.io/MathLand/screenshots/19-geo-protractor.jpeg) | ![轴对称](https://wyy520-create.github.io/MathLand/screenshots/20-geo-symmetry.jpeg) |
 | 图形岛 · 方格纸平移 |
-| ![平移](./docs/screenshots/21-geo-translate.jpeg) |
+| ![平移](https://wyy520-create.github.io/MathLand/screenshots/21-geo-translate.jpeg) |
 
 更多截图见 [docs/screenshots](./docs/screenshots)。
 
