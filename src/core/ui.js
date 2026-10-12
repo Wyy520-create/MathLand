@@ -105,9 +105,10 @@ export function runIsland(def, level) {
   const bar = el('div', 'topbar')
   const home = el('button', 'home', '🏠')
   home.onclick = () => (location.hash = '')
-  const name = el('span', 'island-name', `${def.icon} ${def.name} · 第${level}关`)
+  const isFree = level === 0 // 自由模式（如积木岛沙盘）：不显示关卡序号与进度点
+  const name = el('span', 'island-name', `${def.icon} ${def.name}${isFree ? '' : ` · 第${level}关`}`)
   const pips = el('div', 'level-pips')
-  for (let i = 1; i <= def.levelCount; i++) {
+  if (!isFree) for (let i = 1; i <= def.levelCount; i++) {
     const p = el('i')
     if (i < level) p.className = 'done'
     if (i === level) p.className = 'now'

@@ -12,9 +12,10 @@ import fraction from './islands/fraction.js'
 import maze from './islands/maze.js'
 import chicken from './islands/chicken.js'
 import statsIsland from './islands/stats.js'
+import geometry from './islands/geometry.js'
 import { renderReport } from './report.js'
 
-export const ISLANDS = [blocks, mental, clock, shop, fraction, maze, chicken, statsIsland]
+export const ISLANDS = [blocks, mental, clock, shop, fraction, maze, chicken, statsIsland, geometry]
 
 function renderMenu() {
   const app = document.getElementById('app')
@@ -23,7 +24,7 @@ function renderMenu() {
 
   const hero = el('div', 'hero')
   hero.innerHTML = `<h1><span class="logo floaty">🏰</span> 数学王国 MathLand</h1>
-    <p>八大主题岛，玩一玩就会了 · 适合 1-6 年级</p>`
+    <p>九大主题岛，玩一玩就会了 · 适合 1-6 年级</p>`
   wrap.appendChild(hero)
 
   const grid = el('div', 'island-grid')
@@ -93,6 +94,19 @@ function renderLevelSelect(isl) {
     grid.appendChild(card)
   }
   wrap.appendChild(grid)
+
+  // 自由模式入口（如积木岛沙盘）：不判星、自由玩
+  if (isl.freePlayName) {
+    const free = el('button', 'island-card')
+    free.style.setProperty('--c', isl.color)
+    free.style.gridColumn = '1 / -1'
+    free.innerHTML = `<div class="icon">${isl.freePlayName.split(' ')[0]}</div>
+      <h3>${isl.freePlayName.slice(2)}</h3>
+      <div class="blurb">把试卷上没看懂的题摆出来，转着看一看、剥开数一数，一清二楚！</div>`
+    free.onclick = () => { sfx.click(); runIsland(isl, 0) }
+    wrap.appendChild(free)
+  }
+
   app.appendChild(wrap)
 }
 

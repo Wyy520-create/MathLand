@@ -12,7 +12,7 @@ const FACE_COLOR = 0xff6b6b
 // face 顺序：+x -x +y -y +z -z
 const DIRS = [[1, 0, 0], [-1, 0, 0], [0, 1, 0], [0, -1, 0], [0, 0, 1], [0, 0, -1]]
 
-export function createScene(holder, { onTapCell } = {}) {
+export function createScene(holder, { onTapCell, tapMode } = {}) {
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
   renderer.setPixelRatio(Math.min(devicePixelRatio, 2))
   holder.appendChild(renderer.domElement)
@@ -186,7 +186,8 @@ export function createScene(holder, { onTapCell } = {}) {
       let cell = null
       if (hits.length) {
         const [x, y, z] = hits[0].object.userData.cell
-        cell = [x, y, z + 1] // 点在方块上 → 往上叠
+        // 拆除模式：点哪块拆哪块；否则点在方块上 → 往上叠
+        cell = tapMode && tapMode() === 'remove' ? [x, y, z] : [x, y, z + 1]
       } else {
         const pt = new THREE.Vector3()
         if (ray.ray.intersectPlane(groundPlane, pt)) {
