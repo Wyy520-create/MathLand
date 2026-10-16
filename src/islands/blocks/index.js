@@ -46,9 +46,10 @@ function playSandbox(ctx) {
       ? `共 <span class="hl">${mine.length}</span> 块 · 占地 <span class="hl">${new Set(mine.map(c => c[0] + ',' + c[1])).size}</span> 格 · 最高 <span class="hl">${Math.max(...mine.map(c => c[2])) + 1}</span> 层 · 露出 <span class="hl">${exposedFaces(mine)}</span> 个面`
       : '点一点底座，开始搭吧！'
     for (const d of ['front', 'top', 'left']) {
-      slots[d].innerHTML = mine.length
-        ? `${DIR_NAME[d]}<br>${drawGrid(viewOf(mine, d), { size: 22 }).outerHTML}`
-        : ''
+      slots[d].innerHTML = ''
+      if (mine.length) {
+        slots[d].append(DIR_NAME[d], document.createElement('br'), drawGrid(viewOf(mine, d), { size: 22 }))
+      }
     }
     if (!mine.length) ctx.clearFb()
   }
