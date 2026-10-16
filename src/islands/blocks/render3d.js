@@ -90,7 +90,7 @@ export function createScene(holder, { onTapCell, tapMode } = {}) {
     const [x, y, z] = mesh.userData.cell
     const colors = mesh.material.map((m, f) => {
       const [dx, dy, dz] = DIRS[f]
-      return set.has(key(x + dx, y + dy, z + dz)) ? GRAY : FACE_COLOR
+      return (set.has(key(x + dx, y + dy, z + dz)) || (dz === -1 && z === 0)) ? GRAY : FACE_COLOR
     })
     mesh.material.forEach((m, f) => {
       m.color.setHex(colors[f])

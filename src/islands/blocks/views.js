@@ -38,7 +38,9 @@ export function exposedFaces(cells) {
   let n = 0
   for (const [x, y, z] of cells) {
     for (const [dx, dy, dz] of [[1, 0, 0], [-1, 0, 0], [0, 1, 0], [0, -1, 0], [0, 0, 1], [0, 0, -1]]) {
-      if (!set.has(key(x + dx, y + dy, z + dz))) n++
+      if (set.has(key(x + dx, y + dy, z + dz))) continue
+      if (dz === -1 && z === 0) continue // 贴底座的底面按试卷口径不算露出
+      n++
     }
   }
   return n

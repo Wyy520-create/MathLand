@@ -232,7 +232,7 @@ async function playFaces(ctx, level) {
   const n = level <= 2 ? 3 + ((Math.random() * 3) | 0) : 6 + ((Math.random() * 4) | 0)
   const target = genStack(n)
   const answer = exposedFaces(target)
-  ctx.setPrompt(`这堆积木一共有 <em>多少</em> 个面露在外面？（贴在一起的面不算哦）`)
+  ctx.setPrompt(`这堆积木一共有 <em>多少</em> 个面露在外面？（贴在一起、贴着地面的面都不算哦）`)
   const { area, holder } = makeHolder(ctx.stage)
   const sc = createScene(holder)
   sc.setCells(target)
@@ -271,7 +271,7 @@ export default {
     if (level <= 2) return '数方块有小窍门：<b>分层数</b>！先数最下面一层有几块，再数第二层、第三层……最后加起来。被挡住的可不是空气，下面有方块，上面才可能搭得住。用「剥开看看」滑块一层层检查。'
     if (level <= 4) return '看三视图先找准方向：<b>前面</b>是从你正前方看过去的轮廓，<b>上面</b>是俯视图（ footprint ），<b>左面</b>是从积木左边看。可以用「飞到…看一眼」飞到那个方向确认，再飞回来选答案。'
     if (level <= 6) return '搭积木先看<b>上面</b>：它告诉你哪些位置要放方块、各占几格；再看<b>前面</b>：它告诉你每一列要搭多高。一层一层往上搭就不会错。'
-    return '数露在外面的面：<b>一块单独的方块有 6 个面</b>；每和一个邻居贴在一起，就少 1 个面。用「给露出的面上色」，数一数红色面有几个吧。'
+    return '数露在外面的面：<b>一块单独放着的方块只露出 5 个面</b>（贴着底座的那面不算）；每和一个邻居贴在一起，又少 1 个面。用「给露出的面上色」，数一数亮色面有几个吧。'
   },
   play(ctx, level) {
     if (level === 0) return playSandbox(ctx)
